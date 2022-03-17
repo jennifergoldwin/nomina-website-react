@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import "../src/css/App.css"
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";  
+import All from "./pages/All";
+import React, { useEffect,useState } from "react";
+import Loading from "./components/Loading";
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+  useEffect(()=>{
+    setTimeout(() => setLoading(false), 3000)
+  },[]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>{loading === false?(
+    <Router>
+      <Header/>
+      <Routes>
+        <Route exact path="/" element={<All/>}></Route>
+      </Routes>
+      <Footer/>
+    </Router>) : (
+      <Loading/>
+    )}</>
   );
 }
-
+ 
 export default App;

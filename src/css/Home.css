@@ -1,0 +1,111 @@
+.image-stack--top{
+    float: left;
+    width: 100%;
+    margin-right: -100%;   
+    position: relative;
+    z-index: 1;
+}
+.image-stack--top2{
+    /* float: left;
+    width: 100%;
+    margin-right: -100%;   
+    position: relative;
+    z-index: 2; */
+    float: left;
+    width: 100%;
+    margin-right: -100%;   
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+}
+
+.home-img-wrap >img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.a-wrap-link{
+    background-color: #0AE6A6;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    padding-top: 0.824rem;
+    padding-bottom: 0.824rem;
+    border-radius: 15pt;
+    color: white;
+    font-weight: 800;
+}
+
+.a-container{
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.title-container{
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.subtitle-container{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 675px) {
+    .bg-home{
+        background: url(/public/images/evermore-mob.png);
+        min-height: 90vh;
+        background-position: top;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .title-container{
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    
+    .subtitle-container{
+        font-size: 0.98rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 675px) {
+    .bg-home{
+        background: url(/public/images/evermore.png);
+        min-height: 120vh;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-home-outer{
+        background: url(/public/images/Group\ 2074.svg);
+        background-size: cover;
+        min-height: 120vh;
+        background-position: center;
+       
+    }
+}
+.a-wrap-link:hover{
+    text-decoration: none;
+    color: white;
+}
